@@ -112,6 +112,13 @@ h6 {
   margin-left: 7px;
 }
 
+* img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .no-webp .header{
   background: url("../img/header__main/header__main-backround.png") center/cover no-repeat; }
 
@@ -198,7 +205,7 @@ h6 {
 }
 
 .generation__container {
-  width: 67.49%;
+  width: 67.5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -215,6 +222,120 @@ h6 {
 
 .generation__title {
   margin: 20px 0 20px 0;
+}
+
+.oliva {
+  width: 100%;
+  max-height: 100%;
+}
+
+.oliva__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+.oliva__main {
+  min-height: 100%;
+  -ms-flex-preferred-size: 66.6666%;
+      flex-basis: 66.6666%;
+  position: relative;
+  cursor: pointer;
+}
+
+.no-webp .oliva__main::before{
+  background-image: url("../img/olivia__block/olivia__logo.png"); }
+
+.oliva__main::before {
+  content: "";
+  -webkit-transition: all 0.75s;
+  -o-transition: all 0.75s;
+  transition: all 0.75s;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color: rgba(115, 187, 158, 0.6);
+  opacity: 0;
+}
+
+.oliva__main:hover::before {
+  content: "";
+  opacity: 1;
+}
+
+.oliva__extra {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-preferred-size: 33.3334%;
+      flex-basis: 33.3334%;
+}
+
+.extra__body {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 12% 6%;
+  position: relative;
+}
+
+.extra__body::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #fff;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  z-index: 2;
+}
+
+.extra__body-text {
+  position: relative;
+}
+
+.extra__body-text::after {
+  content: "";
+  display: block;
+  margin: 10px 0 0 0;
+  left: 44%;
+  position: absolute;
+  width: 50px;
+  height: 1px;
+  background-color: #848789;
+  -webkit-box-shadow: 1px 1px 5px #4d4959;
+          box-shadow: 1px 1px 5px #4d4959;
+}
+
+.extra__body-title {
+  margin: 0 0 20px;
 }
 
 * {
@@ -326,6 +447,19 @@ body {
   .phone__line-third {
     margin: 20px 0 0 0;
   }
+
+  .oliva__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .extra__body {
+    background-color: #f7f7f7;
+  }
 }
 
 .webp .header{ background: url(../img/header__main/header__main-backround.webp) center/cover no-repeat; }
+
+.webp .oliva__main::before{ background-image: url(../img/olivia__block/olivia__logo.webp); }
