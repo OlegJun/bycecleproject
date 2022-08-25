@@ -301,6 +301,8 @@ h6 {
           align-items: center;
   padding: 12% 6%;
   position: relative;
+  -ms-flex-preferred-size: 66.6666;
+      flex-basis: 66.6666;
 }
 
 .extra__body::after {
@@ -338,6 +340,11 @@ h6 {
           box-shadow: 1px 1px 5px #4d4959;
 }
 
+.extra__img {
+  -ms-flex-preferred-size: 33.3334%;
+      flex-basis: 33.3334%;
+}
+
 .boriosa {
   width: 100%;
   max-height: 100%;
@@ -363,7 +370,7 @@ h6 {
 }
 
 .no-webp .boriosa__main::before{
-  background-image: url("../img/olivia__block/olivia__logo.png"); }
+  background-image: url("../img/boriosa__block/boriosa__logo.png"); }
 
 .boriosa__main::before {
   content: "";
@@ -401,9 +408,51 @@ h6 {
       flex-basis: 33.3334%;
 }
 
-.extra__body {
-  height: 100%;
+.hulot {
   width: 100%;
+  max-height: 100%;
+}
+
+.hulot__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+.hulot__main-first {
+  min-height: 100%;
+  -ms-flex-preferred-size: 33.3333%;
+      flex-basis: 33.3333%;
+  position: relative;
+  cursor: pointer;
+}
+
+.no-webp .hulot__main-first::before{
+  background-image: url("../img/hulot__block/hulot__logo.png"); }
+
+.hulot__main-first::before {
+  content: "";
+  -webkit-transition: all 0.75s;
+  -o-transition: all 0.75s;
+  transition: all 0.75s;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color: rgba(115, 187, 158, 0.6);
+  opacity: 0;
+}
+
+.hulot__main-first:hover::before {
+  content: "";
+  opacity: 1;
+}
+
+.hulot__extra {
+  min-height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -411,49 +460,42 @@ h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 12% 6%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-preferred-size: 33.3334%;
+      flex-basis: 33.3334%;
+}
+
+.hulot__main-second {
+  min-height: 100%;
+  -ms-flex-preferred-size: 33.3333%;
+      flex-basis: 33.3333%;
   position: relative;
+  cursor: pointer;
 }
 
-.extra__body::after {
+.no-webp .hulot__main-second::before{
+  background-image: url("../img/hulot__block/hulot__logo.png"); }
+
+.hulot__main-second::before {
   content: "";
-  display: block;
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-top: 10px solid #fff;
+  -webkit-transition: all 0.75s;
+  -o-transition: all 0.75s;
+  transition: all 0.75s;
   position: absolute;
-  top: 100%;
-  left: 50%;
-  z-index: 2;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color: rgba(115, 187, 158, 0.6);
+  opacity: 0;
 }
 
-.extra__body-title {
-  margin: 10px 0 10px;
-}
-
-.extra__body-text {
-  position: relative;
-}
-
-.extra__body-text::after {
+.hulot__main-second:hover::before {
   content: "";
-  display: block;
-  margin: 10px 0 0 0;
-  left: 44%;
-  position: absolute;
-  width: 50px;
-  height: 1px;
-  background-color: #848789;
-  -webkit-box-shadow: 1px 1px 5px #4d4959;
-          box-shadow: 1px 1px 5px #4d4959;
+  opacity: 1;
 }
 
 * {
@@ -576,10 +618,28 @@ body {
   .extra__body {
     background-color: #f7f7f7;
   }
+
+  .boriosa__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .hulot__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .webp .header{ background: url(../img/header__main/header__main-backround.webp) center/cover no-repeat; }
 
 .webp .oliva__main::before{ background-image: url(../img/olivia__block/olivia__logo.webp); }
 
-.webp .boriosa__main::before{ background-image: url(../img/olivia__block/olivia__logo.webp); }
+.webp .boriosa__main::before{ background-image: url(../img/boriosa__block/boriosa__logo.webp); }
+
+.webp .hulot__main-first::before{ background-image: url(../img/hulot__block/hulot__logo.webp); }
+
+.webp .hulot__main-second::before{ background-image: url(../img/hulot__block/hulot__logo.webp); }
