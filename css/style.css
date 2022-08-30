@@ -640,7 +640,7 @@ h6 {
   position: absolute;
   width: 10px;
   height: 10px;
-  bottom: 30px;
+  bottom: 50px;
   background-color: rgb(0, 0, 0);
   border-radius: 50%;
   left: calc(50% - 30px);
@@ -655,7 +655,7 @@ h6 {
   position: absolute;
   width: 10px;
   height: 10px;
-  bottom: 30px;
+  bottom: 50px;
   border: rgb(0, 0, 0) 1px solid;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -944,7 +944,7 @@ h6 {
 .footer__contain {
   width: 100%;
   height: 100%;
-  padding: 60px;
+  padding: 4% 6%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1203,19 +1203,20 @@ body {
             flex-direction: column;
   }
 
+  .submission {
+    padding: 0 15px;
+  }
+
   .submission__form {
+    width: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 0 15px;
-  }
-
-  .submission__form input {
-    margin: 0 0 10px 0;
   }
 
   .submission__form button {
+    margin: 10px 0 0 0;
     width: 100%;
     height: 50px;
     border: 1px solid #d3d7d9;
